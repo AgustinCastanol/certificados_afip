@@ -11,6 +11,7 @@ export default async function handler(req, res) {
     const Sign=`qxWla3ig3mcoNBzwg20ilUHcCl1rDTmgMymFvpbJI8/hpbgQwUUbua85bYpzFyH9SCE/ePppFF6tp6xCn+odH+mKmvcz0hKNxNr8hZOTbotdiCvdsrfKvp0nw/KwjoOKhATkog+A
     2vsv5lsr7Qe+mIKD2xFdDc7yLp8Dq1185wU=`;
     const Cuit = `20428201885`;
+    const IdReferencia='3712876293'
     const xml = 
 `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ar="ar.gov.afip.dia.serviciosweb.wgesTabRef">
 <soapenv:Header/>
@@ -28,7 +29,7 @@ export default async function handler(req, res) {
          <ar:Sign>${Sign}</ar:Sign>
       </ar:Autentica>
       <!--Optional:-->
-      <ar:IdReferencia>?</ar:IdReferencia>
+      <ar:IdReferencia>${IdReferencia}</ar:IdReferencia>
    </ar:ConsultarFechaUltAct>
 </soapenv:Body>
 </soapenv:Envelope>`
